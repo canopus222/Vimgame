@@ -1,0 +1,86 @@
+/* メインの迷路スタイル */
+.maze {
+  display: grid;
+  grid-template-rows: repeat(20, 20px);
+  gap: 2px;
+}
+
+.row {
+  display: grid;
+  grid-template-columns: repeat(20, 20px);
+  gap: 2px;
+}
+
+.cell {
+  width: 20px;
+  height: 20px;
+  border: 1px solid black;
+  text-align: center;
+  transition: background-color 0.3s ease; /* 背景色変更時にアニメーション */
+}
+
+.wall {
+  background-color: black;
+}
+
+.start {
+  background-color: green;
+}
+
+.goal {
+  background-color: red;
+}
+
+.path {
+  background-color: white;
+}
+
+.dark {
+  background-color: gray;
+}
+
+.player {
+  background-color: blue;
+}
+
+/* ポップアップスタイル */
+.popup {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.popup-content {
+  background: white;
+  padding: 20px;
+  text-align: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+}
+
+.popup button {
+  margin-top: 10px;
+  padding: 5px 10px;
+  background-color: #4CAF50;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.popup button:hover {
+  background-color: #45a049;
+}
+
+.message {
+  font-size: 24px;
+  color: green;
+  margin-top: 10px;
+  text-align: center;
+}
